@@ -1,0 +1,18 @@
+tasks.register("hello") {
+    doFirst {
+        println("Hello")
+    }
+    doLast {
+        println(", Gradle")
+    }
+}
+
+tasks.register("world") {
+    dependsOn("hello")
+    doFirst {
+        println("world")
+    }
+    doLast {
+        println(", Gradle2")
+    }
+}

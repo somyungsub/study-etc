@@ -1,0 +1,38 @@
+buildscrilt {
+    ext {
+        // version 등 속성
+        java_version '1.8'
+    }
+
+    repositoies {
+//        jcenter()
+//        maven(url)
+    }
+
+    dependencies {
+
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+project(':하위 플젝') {
+
+}
+
+project(':하위 플젝2') {
+    dependencies{
+        implementation project(':하위플젝'), project(':또다른 하위플젝')
+    }
+}
+
+allproejct{
+    // 모든 플젝 적용
+
+}
+
+subprojects {
+    // 하위 프로젝트에만 적용
+}
