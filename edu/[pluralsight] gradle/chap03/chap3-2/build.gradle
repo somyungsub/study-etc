@@ -1,0 +1,24 @@
+// hello gradle world
+
+// def 타입 생략 시 활용
+def name = "ssosoo"
+
+// 클로저 활용 {} 중괄호로 정의, 클로즈.call(매개변수), 클로즈(매개변수)
+def clos1 = { value -> println "Hi, $value" }
+def clos2 = {println "hi, $it"}
+
+task hello {
+    clos1.call('ssosso')
+    clos2('ssosso2')
+}
+
+/*
+  명령어
+    - 프로퍼티 : gradle properties
+    - 태스크 : gradle tasks
+  디버깅
+    - gradle -i (--info)
+    - gradle -d (--debug)
+    - gradle -s (--stacktrace)
+    - gradle -S (--full-statctrace)
+ */
